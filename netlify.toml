@@ -1,0 +1,10 @@
+# Configuração para o Netlify montar o app automaticamente.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Garante que o app (single-page) funcione em qualquer rota.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
